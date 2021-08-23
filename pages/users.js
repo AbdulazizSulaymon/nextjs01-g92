@@ -7,13 +7,7 @@ import styled from "styled-components";
 import Link from "next/link"
 
 const UsersWrapper = styled.div`
-    h1{
-        text-align: center;
-        background-color: #123;
-        padding: 10px 20px;
-        border-radius: 10px;
-        color: white;
-    }
+    
 `;
 
 const Users = () => {
@@ -31,6 +25,20 @@ const Users = () => {
 
     return (
         <UsersWrapper>
+            <header>
+                <ul className="d-flex">
+                    <li>
+                        <Link href="/"><a className="btn">Home</a></Link>
+                    </li>
+                    <li>
+                        <Link href="/users"><a className="btn">Users</a></Link>
+                    </li>
+                    <li>
+                        <Link href="#"><a className="btn">Todos</a></Link>
+                    </li>
+                </ul>
+            </header>
+
             <h1><FontAwesomeIcon icon={faUsers} /> Users page</h1>
 
             <Link href="/users/1">
